@@ -46,13 +46,25 @@
     });
   }
 
-  /* "Consultá sobre [área]" deja elegida esa área en el formulario */
+  /* El placeholder del mensaje depende del área elegida: solo Marcas lleva una guía */
   var selectArea = document.getElementById('area');
+  var campoMensaje = document.getElementById('mensaje');
+  var PLACEHOLDER_MARCAS = 'Nombre de tu marca y qué vendés o qué servicio ofrecés';
+  function actualizarPlaceholder() {
+    if (!selectArea || !campoMensaje) return;
+    campoMensaje.placeholder = selectArea.value === 'Marcas (Propiedad intelectual)' ? PLACEHOLDER_MARCAS : '';
+  }
+  if (selectArea) selectArea.addEventListener('change', actualizarPlaceholder);
+
+  /* "Consultá sobre [área]" deja elegida esa área en el formulario */
   document.querySelectorAll('[data-area]').forEach(function (link) {
     link.addEventListener('click', function () {
       if (selectArea) selectArea.value = link.getAttribute('data-area');
+      actualizarPlaceholder();
     });
   });
+  // Estado inicial (y al volver con el formulario ya completado por el navegador)
+  actualizarPlaceholder();
 
   /* Formulario de contacto */
   var form = document.getElementById('form-contacto');

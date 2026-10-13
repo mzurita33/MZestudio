@@ -141,7 +141,7 @@ p { margin: 0; }
 
 /* Quién soy */
 .quien { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; }
-.quien__foto { margin: 0; aspect-ratio: 4 / 5; width: 100%; max-width: 300px; background: var(--azul); position: relative; overflow: hidden; }
+.quien__foto { margin: 0; aspect-ratio: 4 / 5; width: 100%; max-width: 270px; background: var(--azul); position: relative; overflow: hidden; }
 .quien__foto img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .quien__foto-vacia {
   position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
@@ -270,6 +270,24 @@ p { margin: 0; }
 .datos dd a { text-decoration: none; }
 .datos dd a:hover { text-decoration: underline; }
 .datos .btn { align-self: flex-start; }
+
+/* Esquinas redondeadas en todo el sitio: botones, tarjetas, foto y formulario.
+   Las franjas de ancho completo (portada, pie, secciones) quedan rectas. */
+:root { --radio: 10px; --radio-grande: 15px; }
+.btn, .skip { border-radius: var(--radio); }
+.area, .quien__foto, #contacto .form { border-radius: var(--radio-grande); }
+.nav.abierto { border-radius: 0 0 var(--radio-grande) var(--radio-grande); }
+#contacto .campo input,
+#contacto .campo select,
+#contacto .campo textarea {
+  border-radius: var(--radio);
+  border: 1px solid rgba(0, 31, 63, 0.45);
+}
+#contacto .campo [aria-invalid="true"] { border-color: var(--error); }
+#contacto .campo input:focus,
+#contacto .campo select:focus,
+#contacto .campo textarea:focus { outline-offset: 1px; }
+#contacto .consentimiento input { border-radius: 4px; }
 .icono { width: 20px; height: 20px; flex: none; }
 
 /* Footer */
@@ -285,14 +303,19 @@ p { margin: 0; }
 .footer__abajo li a { display: inline-flex; min-height: 44px; align-items: center; }
 
 /* WhatsApp flotante (solo celular) */
+/* WhatsApp flotante: circular, con el verde y el logo de WhatsApp (un tono más oscuro que el #25D366 original) */
 .wa-flotante {
+  --wa-verde: #1EA952;
+  --wa-verde-hover: #178A42;
   position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 40;
-  width: 56px; height: 56px; display: flex; align-items: center; justify-content: center;
-  background: var(--azul); color: var(--blanco); border: 1.5px solid var(--blanco);
-  box-shadow: 0 4px 14px rgba(0, 31, 63, 0.22);
+  width: 50px; height: 50px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--wa-verde); color: var(--blanco); border: 0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: background-color .2s ease;
 }
-.wa-flotante:hover { color: var(--bronce-claro); }
-.wa-flotante svg { width: 26px; height: 26px; }
+.wa-flotante:hover { background: var(--wa-verde-hover); color: var(--blanco); }
+.wa-flotante svg { width: 25px; height: 25px; }
 
 /* Páginas legales */
 .legal { padding-block: 56px 80px; }
@@ -343,12 +366,12 @@ p { margin: 0; }
   .seccion__cabeza { margin-bottom: 60px; }
 
   .quien { grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 72px; align-items: center; }
-  .quien__foto { max-width: 360px; justify-self: center; }
+  .quien__foto { max-width: 320px; justify-self: center; }
 
   .contacto { grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: 56px; align-items: start; }
 
   .footer__arriba { flex-direction: row; justify-content: space-between; align-items: center; }
   .footer__abajo { flex-direction: row; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
 
-  .wa-flotante { display: none; }
+  .wa-flotante { right: 28px; bottom: 28px; width: 54px; height: 54px; }
 }
