@@ -375,3 +375,7 @@ p { margin: 0; }
 
   .wa-flotante { right: 28px; bottom: 28px; width: 54px; height: 54px; }
 }
+
+/* El mensaje de Marcas lleva una guía de 4 líneas: se deja más alto para que se lea completa */
+#contacto .campo textarea { min-height: 170px; }
+.exito .btn { align-self: flex-start; margin-top: 6px; }

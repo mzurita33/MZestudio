@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MZ Estudio Jurídico · Propiedad intelectual y contratos en Buenos Aires</title>
 <meta name="description" content="Martin Zurita, abogado en CABA. Registro de marcas ante el INPI, propiedad intelectual y contratos para emprendedores, creadores y pymes. Agendá una entrevista.">
-<link rel="canonical" href="https://mzestudiojuridico.com.ar/">
+<link rel="canonical" href="https://mzestudio.com.ar/">
 <meta name="theme-color" content="#001F3F">
 
 <meta property="og:type" content="website">
@@ -13,8 +13,8 @@
 <meta property="og:site_name" content="MZ Estudio Jurídico">
 <meta property="og:title" content="MZ Estudio Jurídico · Propiedad intelectual y contratos">
 <meta property="og:description" content="Protegé tu marca. Firmá con tranquilidad. Asesoramiento a medida en propiedad intelectual y contratos.">
-<meta property="og:url" content="https://mzestudiojuridico.com.ar/">
-<meta property="og:image" content="https://mzestudiojuridico.com.ar/og-image.png">
+<meta property="og:url" content="https://mzestudio.com.ar/">
+<meta property="og:image" content="https://mzestudio.com.ar/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Logo de MZ Estudio Jurídico sobre fondo azul">
@@ -27,15 +27,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/v2.css">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LegalService",
   "name": "MZ Estudio Jurídico",
-  "url": "https://mzestudiojuridico.com.ar/",
-  "logo": "https://mzestudiojuridico.com.ar/assets/MZ-logo-linea-positivo.svg",
-  "image": "https://mzestudiojuridico.com.ar/og-image.png",
+  "url": "https://mzestudio.com.ar/",
+  "logo": "https://mzestudio.com.ar/assets/MZ-logo-linea-positivo.svg",
+  "image": "https://mzestudio.com.ar/og-image.png",
   "description": "Asesoramiento en propiedad intelectual y contratos para emprendedores, creadores y pymes.",
   "telephone": "+54 9 11 3918-0760",
   "address": {
@@ -53,6 +54,7 @@
 </head>
 <body>
 <a class="skip" href="#contenido">Saltar al contenido</a>
+<div class="progreso" aria-hidden="true"></div>
 
 <header class="header">
   <div class="contenedor header__fila">
@@ -83,10 +85,14 @@
 <main id="contenido">
 
   <section class="hero sobre-azul" id="inicio" aria-labelledby="hero-titulo">
+    <svg class="hero__simbolo" viewBox="-8 -8 196 116" aria-hidden="true" focusable="false">
+      <polyline pathLength="1" points="0,100 0,0 45,56 90,0 150,0 90,100 150,100"></polyline>
+      <rect x="165" y="90" width="19" height="19"></rect>
+    </svg>
     <div class="contenedor">
       <div class="hero__cuerpo">
         <p class="rotulo">Estudio jurídico · Buenos Aires</p>
-        <h1 id="hero-titulo"><span class="frase">Protegé tu marca.</span> <em class="frase">Firmá con tranquilidad.</em></h1>
+        <h1 id="hero-titulo"><span class="frase"><span class="frase__in" style="--n:0">Protegé tu marca.</span></span> <em class="frase"><span class="frase__in" style="--n:1">Firmá con tranquilidad.</span></em></h1>
         <p class="hero__bajada">Asesoramiento a medida en propiedad intelectual y contratos.</p>
         <div class="hero__botones">
           <a class="btn" href="#contacto">Contacto</a>
@@ -95,6 +101,17 @@
       <div class="hero__base" aria-hidden="true"><hr class="firma"><span></span></div>
     </div>
   </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__pista">
+      <ul class="marquee__grupo">
+        <li>Propiedad intelectual</li><li>Registro de marcas</li><li>Contratos</li><li>Acuerdos de confidencialidad</li><li>Derecho de autor</li><li>Términos y condiciones</li>
+      </ul>
+      <ul class="marquee__grupo">
+        <li>Propiedad intelectual</li><li>Registro de marcas</li><li>Contratos</li><li>Acuerdos de confidencialidad</li><li>Derecho de autor</li><li>Términos y condiciones</li>
+      </ul>
+    </div>
+  </div>
 
   <section class="seccion seccion--marfil" id="quien-soy" aria-labelledby="quien-titulo">
     <div class="contenedor quien">
@@ -108,7 +125,7 @@
           <p class="quien__titulo">Abogado · UADE</p>
         </div>
         <p class="quien__lema">Abogado especializado en Derecho de marcas y contractual.</p>
-        <p>Mi experiencia viene de la gestión de contratos corporativos para empresas multinacionales de tecnología y telecomunicaciones.</p>
+        <p>Mi experiencia viene de la gestión de contratos comerciales en empresas multinacionales de tecnología y telecomunicaciones.</p>
         <p>Hoy ayudo a emprendedores, creadores y pymes a registrar su marca y a cerrar acuerdos claros.</p>
         <dl class="quien__datos">
           <div><dt>Matrícula</dt><dd>T° 999 / F° 00 – CPACF</dd></div>
@@ -151,9 +168,7 @@
     </div>
   </section>
 
-  <div class="contenedor" aria-hidden="true"><hr class="firma"></div>
-
-  <section class="seccion" id="como-trabajo" aria-labelledby="trabajo-titulo">
+  <section class="seccion seccion--azul sobre-azul" id="como-trabajo" aria-labelledby="trabajo-titulo">
     <div class="contenedor">
       <div class="seccion__cabeza revelar">
         <p class="rotulo">Cómo trabajo</p>
@@ -284,5 +299,6 @@
 </a>
 
 <script src="js/main.js" defer></script>
+<script src="js/v2.js" defer></script>
 </body>
 </html>
