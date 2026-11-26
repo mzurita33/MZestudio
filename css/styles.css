@@ -2,12 +2,12 @@
    Mobile first: base a 375 px, escritorio desde 900 px. Bordes rectos, mucho aire. */
 
 :root {
-  --azul: #001F3F;
-  --bronce: #9A7440;
-  --bronce-claro: #C9A36A;
+  --azul: #1D1E21;
+  --bronce: #2F5BFF;
+  --bronce-claro: #2F5BFF;
   --blanco: #FFFFFF;
-  --marfil: #F5F4F0;
-  --texto-sec: #3A4150;
+  --marfil: #F4F2EE;
+  --texto-sec: #6B6E75;
   --linea: #E2E0D8;
   --linea-azul: rgba(255, 255, 255, 0.24);
   --error: #A3261B;
@@ -66,7 +66,7 @@ p { margin: 0; }
 }
 
 /* Marcador de contenido a completar: borrar la clase cuando esté el dato real */
-.pendiente { color: inherit; background: rgba(201, 163, 106, 0.28); padding: 0 4px; }
+.pendiente { color: inherit; background: rgba(47, 91, 255, 0.28); padding: 0 4px; }
 
 /* Botones */
 .btn {
@@ -77,7 +77,7 @@ p { margin: 0; }
   background: var(--azul); color: var(--blanco);
   transition: background-color .2s ease, color .2s ease, border-color .2s ease;
 }
-.btn:hover { background: #0B2E54; border-color: #0B2E54; color: var(--blanco); }
+.btn:hover { background: #2C2E33; border-color: #2C2E33; color: var(--blanco); }
 .btn--borde { background: transparent; color: var(--azul); }
 .btn--borde:hover { background: var(--azul); color: var(--blanco); }
 .sobre-azul .btn { background: var(--blanco); border-color: var(--blanco); color: var(--azul); }
@@ -281,7 +281,7 @@ p { margin: 0; }
 #contacto .campo select,
 #contacto .campo textarea {
   border-radius: var(--radio);
-  border: 1px solid rgba(0, 31, 63, 0.45);
+  border: 1px solid rgba(29, 30, 33, 0.45);
 }
 #contacto .campo [aria-invalid="true"] { border-color: var(--error); }
 #contacto .campo input:focus,
@@ -293,7 +293,7 @@ p { margin: 0; }
 /* Footer */
 .footer { background: var(--azul); color: rgba(255, 255, 255, 0.82); padding-block: 56px 40px; font-size: 0.9375rem; }
 .footer a { color: var(--blanco); text-decoration: none; }
-.footer a:hover { color: var(--bronce-claro); text-decoration: underline; }
+.footer a:hover { color: #FFFFFF; text-decoration: underline; }
 .footer__arriba { display: flex; flex-direction: column; gap: 32px; padding-bottom: 32px; }
 .footer__logo svg { width: 220px; height: auto; display: block; color: var(--blanco); }
 .footer nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 28px; }
